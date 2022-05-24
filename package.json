@@ -1,0 +1,27 @@
+{
+  "name": "dropdown-navigation",
+  "version": "0.0.1",
+  "description": "Your challenge is to build out this intro section with dropdown navigation and get it looking as close to the design as possible.",
+  "main": "index.js",
+  "repository": "https://github.com/cbserra/dropdown-navigation",
+  "author": "Chris Serra <789723+cbserra@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+		"start": "http-server ./ -o",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

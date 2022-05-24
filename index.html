@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="./styles.css" rel="stylesheet">
+
+  <!-- FontAwesome Kit -->
+  <script src="https://kit.fontawesome.com/91e94ecb9e.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <img class="logo" src="images/logo.svg" alt="logo" />
+        <div class="overlay-container">
+          <div class="transparent"></div>
+          <div class="menus">
+            <img class="close" src="images/icon-close-menu.svg" alt="close menus" />
+            <ul class="main-menu">
+              <li>Features <i class="fa-solid fa-chevron-down"></i>
+                <ul class="features-menu">
+                  <li>Todo List</li>
+                  <li>Calendar</li>
+                  <li>Reminders</li>
+                  <li>Planning</li>
+                </ul>
+              </li>
+              <li>Company <i class="fa-solid fa-chevron-down"></i></li>
+              <li>Careers</li>
+              <li>About</li>
+            </ul>
+            <ul class="user-menu">
+              <li>Login</li>
+              <li class="button">Register</li>
+            </ul>
+          </div>
+        </div>
+        <img src="images/icon-menu.svg" alt="hamburger" class="hamburger" />
+      </nav>
+    </header>
+    <main>
+      <picture class="hero">
+        <source media="(min-width:701px)" srcset="images/image-hero-desktop.png">
+        <img src="images/image-hero-mobile.png" alt="hero" />
+      </picture>
+      <article>
+        <h1>Make remote work</h1>
+
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <button>Learn more</button>
+      </article>
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
