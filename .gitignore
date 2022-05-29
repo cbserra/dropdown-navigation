@@ -124,6 +124,6 @@ dist
 .tern-port
 
 # Built files
-public/styles.css
+public/styles.css*
 public/scripts.js
 

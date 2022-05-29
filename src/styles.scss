@@ -368,13 +368,13 @@ footer {
                 padding: .75rem;
             }
 
-            .open .features-menu {
-                left: -3rem;
-            }
+            // .open .features-menu {
+            //     left: -3rem;
+            // }
 
-            .open .company-menu {
-                left: 6.25rem;
-            }
+            // .open .company-menu {
+            //     left: 6.25rem;
+            // }
 
             .user-menu {
                 justify-content: space-evenly;
@@ -390,6 +390,7 @@ footer {
     }
 
     main {
+        margin-top: 3.5rem;
         flex-direction: row-reverse;
         gap: 7rem;
         
@@ -439,7 +440,7 @@ footer {
                     object-fit: contain;
                 }
                 margin: unset;
-                margin-block: 7rem;
+                margin-top: 3rem;
             }
         }
     }
