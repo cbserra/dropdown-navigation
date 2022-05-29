@@ -123,3 +123,7 @@ dist
 # TernJS port file
 .tern-port
 
+# Built files
+public/styles.css
+public/scripts.js
+

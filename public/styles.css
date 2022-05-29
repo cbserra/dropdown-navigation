@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue";
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #000;
+}
+
+.container {
+  font-size: 1.125rem;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  width: 100vw;
+}
+header nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+header nav .logo {
+  margin: 1rem;
+}
+header nav .hamburger-btn {
+  margin: 1rem;
+}
+header nav .overlay-container {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: end;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+header nav .transparent {
+  position: fixed;
+  height: 100vh;
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  width: 100vw;
+  z-index: 1;
+}
+header nav .menus {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 15rem;
+  height: 100vh;
+  z-index: 10;
+  background: white;
+}
+header nav .main-menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.625rem;
+  align-items: flex-start;
+  flex-direction: column;
+}
+header nav .user-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-inline: auto;
+  width: 80%;
+}
+header nav .user-menu li,
+header nav .main-menu li {
+  list-style-type: none;
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+  width: 100%;
+  line-height: 1.625rem;
+  margin-inline: 0.625rem;
+  padding: 0.625rem;
+}
+header nav li img {
+  display: inline;
+}
+header nav .arrow-up, header nav .arrow-down {
+  margin-left: 0.25rem;
+}
+header nav li.features-item .arrow-up {
+  display: none;
+}
+header nav li.features-item .arrow-down {
+  display: inline;
+}
+header nav li.features-item ul.features-menu {
+  display: none;
+}
+header nav li.features-item.open .arrow-up {
+  display: inline;
+}
+header nav li.features-item.open .arrow-down {
+  display: none;
+}
+header nav li.features-item.open ul.features-menu {
+  display: block;
+}
+header nav li.company-item .arrow-up {
+  display: none;
+}
+header nav li.company-item .arrow-down {
+  display: inline;
+}
+header nav li.company-item ul.company-menu {
+  display: none;
+}
+header nav li.company-item.open .arrow-up {
+  display: inline;
+}
+header nav li.company-item.open .arrow-down {
+  display: none;
+}
+header nav li.company-item.open ul.company-menu {
+  display: block;
+}
+header nav li.button {
+  border: 1.5px solid hsl(0deg, 0%, 41%);
+  border-radius: 1rem;
+}
+header nav .user-menu li {
+  text-align: center;
+}
+header nav .show {
+  display: flex;
+}
+header nav .hide {
+  display: none;
+}
+header nav .close-menus {
+  margin: 1rem;
+  margin-left: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main img[class$=-hero] {
+  width: 100%;
+  object-fit: contain;
+}
+main .desktop-hero {
+  display: none;
+}
+main .mobile-hero {
+  display: initial;
+}
+main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+}
+main article h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  text-align: center;
+  letter-spacing: -0.03125rem;
+}
+main article p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 41%);
+}
+main article button {
+  background: hsl(0deg, 0%, 8%);
+  border-radius: 1rem;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  letter-spacing: -0.222222px;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  cursor: pointer;
+}
+main article button:hover {
+  background: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+}
+
+footer .clients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+footer .clients img {
+  object-fit: contain;
+}
+footer .attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (min-width: 1024px) {
+  header nav .overlay-container {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    align-items: baseline;
+    justify-content: center;
+  }
+  header nav .transparent {
+    display: none;
+  }
+  header nav .main-menu li, header nav .user-menu li, header nav .features-menu li, header nav .company-menu li {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    width: 7.5rem;
+  }
+  header nav .menus {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav .main-menu, header nav .user-menu {
+    flex-direction: row;
+    align-items: center;
+  }
+  header nav .features-menu, header nav .company-menu {
+    display: none;
+  }
+  header nav .open .features-menu, header nav .open .company-menu {
+    background-color: hsl(0deg, 0%, 98%);
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+    border-radius: 0.625rem;
+    padding: 0.75rem;
+  }
+  header nav .open .features-menu {
+    left: -3rem;
+  }
+  header nav .open .company-menu {
+    left: 6.25rem;
+  }
+  header nav .user-menu {
+    justify-content: space-evenly;
+    margin: unset;
+    margin-left: auto;
+    width: auto;
+  }
+  header nav .hamburger-btn, header nav .close-btn {
+    display: none;
+  }
+
+  main {
+    flex-direction: row-reverse;
+    gap: 7rem;
+  }
+  main img.desktop-hero {
+    display: initial;
+    width: 30rem;
+  }
+  main img.mobile-hero {
+    display: none;
+  }
+  main article {
+    align-items: flex-start;
+    width: 33rem;
+  }
+  main article h1 {
+    text-align: left;
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -1.11111px;
+    margin-bottom: 2rem;
+  }
+  main article p {
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+  main article button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: center;
+    letter-spacing: -0.25px;
+    padding-inline: 2.5rem;
+    padding-block: 1rem;
+  }
+  main article footer {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: unset;
+    margin-block: 7rem;
+  }
+  main article footer img {
+    object-fit: contain;
+  }
+}
