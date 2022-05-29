@@ -6,11 +6,11 @@ const pipeline = require('readable-stream').pipeline;
 const cleanCSS = require('gulp-clean-css');
 
 function clean() {
-    return del(['public/scripts.js', 'public/styles.css', 'public/styles.css.map']);
+    return del(['public/*.js', 'public/*.css']);
 }
 
 function cssTranspile() {
-    return src('./*.scss')
+    return src('./src/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('./public'));
 }
@@ -23,7 +23,7 @@ function cssMinify() {
 
 function jsMinify() {
   return pipeline(
-      src('./scripts.js'),
+      src('./src/*.js'),
       uglify(),
       dest('public')
     );
@@ -39,8 +39,8 @@ exports.build = series(
 
 exports.watch = function() {
   exports.build;
-  watch('styles.scss', cssTranspile, cssMinify);
-  watch('scripts.js', jsMinify);
+  watch('src/styles.scss', cssTranspile, cssMinify);
+  watch('src/scripts.js', jsMinify);
 }
 
 exports.default = exports.build;
