@@ -9,7 +9,20 @@
   "scripts": {
     "build": "gulp build",
     "start": "http-server ./ -o",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier 'src/*.js'",
+    "prettier:fix": "prettier --write 'src/*.js'",
+    "stylelint:fix": "stylelint --fix 'src/*.scss'"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss}": "stylelint --fix",
+    "*.{html,json}": "prettier --write"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
@@ -17,19 +30,32 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-minify": "^3.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "postcss": "^8.4.13",
+    "postcss-fail-on-warn": "^0.2.1",
+    "postcss-nested": "^5.0.6",
     "prettier": "^2.6.2",
+    "prettier-eslint": "^15.0.0",
+    "prettier-eslint-cli": "^6.0.1",
+    "prettier-stylelint": "^0.4.2",
     "readable-stream": "^3.6.0",
     "sass": "^1.52.1",
-    "stylelint": "^14.8.2"
+    "stylelint": "^14.8.2",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-prettier": "^2.0.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize-scss": "^7.0.1"
   }
 }
