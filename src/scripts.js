@@ -34,5 +34,13 @@ function toggleMobileMenus(_evt) {
     }
 }
 
+function toggleMobileMenusOnWindowEnlargement(evt) {
+    if (window.innerWidth >= 1024) {
+        toggleMobileMenus(evt);
+    }
+}
+
 closeLink.addEventListener('click', toggleMobileMenus);
 openLink.addEventListener('click', toggleMobileMenus);
+
+window.addEventListener('resize', toggleMobileMenusOnWindowEnlargement);

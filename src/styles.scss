@@ -288,6 +288,30 @@ main {
         flex-direction: column;
         justify-content: center;
         width: 90vw;
+
+        footer {
+
+            .clients {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                margin-block: 2rem;
+                column-gap: 2.8rem;
+
+                img {
+                    object-fit: contain;
+                }
+            }
+
+            .attribution {
+                font-size: 0.75rem;
+                text-align: center;
+
+                a {
+                    color: hsl(228deg 45% 44%);
+                }
+            }
+        }
     }
 
     h1 {
@@ -326,26 +350,6 @@ main {
         background: $almost-white;
         color: $almost-black;
     }
-}
-
-.clients {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-
-    img {
-        object-fit: contain;
-    }
-}
-
-.attribution {
-    font-size: 0.75rem;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228deg 45% 44%);
 }
 
 @media (min-width: 1024px) {
@@ -464,17 +468,21 @@ main {
                 padding-inline: 2.5rem;
                 text-align: center;
             }
-        }
 
-        footer {
-            align-items: flex-start;
-            justify-content: flex-start;
-            margin: unset;
-            margin-top: 3rem;
+            footer {
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin: unset;
+                margin-top: 3rem;
 
-            img {
-                object-fit: contain;
+                .clients {
+                    column-gap: 4rem;
+
+                    img {
+                        object-fit: contain;
+                    }
+                }
             }
-        }
+        }        
     }
 }
