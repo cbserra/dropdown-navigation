@@ -18,6 +18,13 @@ const overlayContainer = document.querySelector('.overlay-container');
 const menus = document.querySelector('.menus');
 
 function toggleMobileMenus(_evt) {
+    [featuresItem, companyItem]
+        .filter((el) => el.classList.contains('open'))
+        .forEach((e) => {
+            console.log(`🚀 ~ [featuresItem,companyItem].filter ~ e:`, e);
+            toggleSubMenus(_evt, e);
+        });
+
     if (menus.classList.contains('slide-in')) {
         menus.classList.toggle('slide-in');
         setTimeout(() => overlayContainer.classList.toggle('show'), 500);

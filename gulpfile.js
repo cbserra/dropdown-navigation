@@ -29,14 +29,27 @@ function jsMinify() {
     return pipeline(src('./src/*.js'), uglify(), dest('public'));
 }
 
+function jsCopy() {
+    return pipeline(src('./src/*.js'), dest('public'));
+}
+
 exports.clean = clean;
 
 exports.build = series(clean, cssTranspile, parallel(cssMinify, jsMinify));
 
-exports.watch = function () {
-    exports.build;
-    watch('src/styles.scss', cssTranspile, cssMinify);
-    watch('src/scripts.js', jsMinify);
-};
+exports.dev = series(clean, parallel(cssTranspile, jsCopy));
+
+// exports.watch = function () {
+//     exports.dev;
+//     watch('src/*.scss', cssTranspile);
+//     watch('src/*.js', jsCopy);
+// };
+function watchChanges() {
+    exports.dev;
+    watch('src/*.scss', cssTranspile);
+    watch('src/*.js', jsCopy);
+}
+
+exports.watch = watchChanges;
 
 exports.default = exports.build;
