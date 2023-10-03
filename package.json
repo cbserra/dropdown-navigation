@@ -42,7 +42,7 @@
         "gulp-uglify": "^3.0.2",
         "husky": "^8.0.1",
         "lint-staged": "^12.4.1",
-        "postcss": "^8.4.13",
+        "postcss": "^8.4.31",
         "postcss-fail-on-warn": "^0.2.1",
         "postcss-nested": "^5.0.6",
         "prettier": "^2.6.2",
